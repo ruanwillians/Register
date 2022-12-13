@@ -45,7 +45,6 @@ export default {
 			this.user.nome = ''
 			this.user.email = ''
 			this.id = null
-			this.msgs= []
 		},
 		salvar(){
 			const metodo = this.id ? 'patch': 'post'
@@ -57,6 +56,7 @@ export default {
 					texto: 'Usuário adiconado com sucesso',
 					tipo: 'success'
 				})
+				
 			})
 			.catch(() => { // () pode ser substituido pelo erro
 					this.msgs.push({
